@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
-function App() {
+//Components
+import Header from './Components/Header/Header'
+import Welcome from './Components/Welcome/Welcome'
+import Profile from './Components/Profile/Profile'
+import Videos from './Components/Videos/Videos'
+import Performance from './Components/Performance/Performance'
+import LessonTitle from './Components/Lesson Title/LessonTitle'
+import LessonInfo from './Components/Lesson Info/LessonInfo'
+import BigPicture from './Components/Big Picture/BigPicture'
+import Contact from './Components/Contact/Contact'
+import Footer from './Components/Footer/Footer'
+
+//Styles
+
+
+
+const App = () => {
+
+  const [ menuOpen, setMenuOpen ] = useState(true)
+  const [ clicked, setClicked ] = useState(false)
+
+  const justClicked = () => {
+    setClicked(true)
+    setTimeout(() => {setClicked(false)},
+    1000)
+  }
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+    justClicked()
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header menuOpen={menuOpen} toggleMenu={toggleMenu} clicked={clicked}/>
+      <Welcome />
+      <Profile />
+      <Videos />
+      <Performance />
+      <LessonTitle />
+      <LessonInfo />
+      <BigPicture />
+      <Contact />
+      <Footer />
+
     </div>
-  );
+  )
 }
 
 export default App;
