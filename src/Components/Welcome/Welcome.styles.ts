@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import welcomeImage from './welcome.jpg'
 import welcomeImageMobile from './welcome_mobile3.jpg'
 
-const BREAKPOINT_WIDTH = "700px"
+const BREAKPOINT_WIDTH = "400px"
 const BREAKPOINT_HEIGHT = "700px"
 
 export const WelcomeArea = styled.div`
@@ -17,15 +17,15 @@ export const WelcomeArea = styled.div`
 
     @media (max-width: ${BREAKPOINT_WIDTH}) {
         background: url(${welcomeImageMobile}) no-repeat center center;
-        background-size: 700px;
+        background-size: 800px;
         justify-content: center;
     }
     @media (max-height: ${BREAKPOINT_HEIGHT}) and (max-width: ${BREAKPOINT_WIDTH}) {
-        background-size: 400px;
+        background-size: 450px;
     }
 `
 export const TextBox = styled.div`
-    padding: 8rem 0 0 8rem;
+    padding: 15vh 0 0 10vw;
     @media (max-width: ${BREAKPOINT_WIDTH}) {
         padding: 10vh 0 0 0;
     }
@@ -34,13 +34,13 @@ export const TextBox = styled.div`
 export const BigTitle = styled.h1`
     font-size: 3rem;
     margin-bottom: 1rem;
-    padding: 0 0 1rem 0.7rem;
+    padding: 0 0 1rem 0;
     border-bottom: 1px solid #2F2F2F;
     display: inline-block;
     @media (max-width: ${BREAKPOINT_WIDTH}) {
-        padding-bottom: 0;
+        padding: 0 0 0 0.7rem;
     }
-    @media (max-height: ${BREAKPOINT_HEIGHT}) {
+    @media (max-height: ${BREAKPOINT_HEIGHT}) and (max-width: ${BREAKPOINT_WIDTH}) {
         font-size: 2rem;
         margin-top: 3rem;
         margin-bottom: 0;

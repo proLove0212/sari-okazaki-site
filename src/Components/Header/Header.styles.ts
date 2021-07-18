@@ -28,6 +28,7 @@ export const Navbar = styled.div<{menuOpen: boolean; backgroundColor: string; cl
     position: fixed;
     top: 0;
     background-color: ${props => props.backgroundColor};
+    z-index: 100;
 
     @media (max-width: ${BREAKPOINT}) {
         transform: ${props => props.menuOpen ? "translateX(-110vw)": "none"};
@@ -41,6 +42,7 @@ export const Navbar = styled.div<{menuOpen: boolean; backgroundColor: string; cl
 
 export const MobileNavbar = styled.div<{backgroundColor: string}>`
     display: none;
+    z-index: 100;
 
     @media (max-width: ${BREAKPOINT}) {
         display: flex;
