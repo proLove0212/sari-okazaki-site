@@ -97,7 +97,7 @@ export const TextBox = styled.div<{ text: string}>`
         left: -10px;
         background-color: #F6F6F6;
         color: #D90D19;
-        padding: 0 0.5rem;
+        padding: 0 0.55rem;
         border-radius: 100px;
     }
 `
