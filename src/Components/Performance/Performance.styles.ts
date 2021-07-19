@@ -24,7 +24,8 @@ export const FlexContainer = styled.div`
 
 export const Image = styled.img`
     flex: 1;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     border-radius: 10px;
     object-fit: cover;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

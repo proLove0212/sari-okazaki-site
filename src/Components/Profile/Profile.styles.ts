@@ -32,22 +32,44 @@ export const TextArea = styled.div`
 `
 
 export const TextBox = styled.div`
-
+    
 `
 
+export const InfoTextBox = styled.div`
+    background-color: #373737;
+    color: #F8F8F8;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+`
+
+
 export const BiggerText = styled.p<{topMargin: boolean}>`
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-top: ${props => props.topMargin ? "auto" : "0"}
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: ${props => props.topMargin ? "auto" : "0"};
+    margin-bottom: 0;
+    margin-left: 1rem;
 `
 
 export const Text = styled.p`
     
 `
 
+export const ListItem = styled.li`
+
+`
+
+export const SubText = styled.p`
+    margin-top: 0;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+`
+
 export const HorizontalRule = styled.hr`
-    border: none;
-    margin: 2rem 0;
+    border: 0;
     height: 1px;
-    background-color: #646363;
+    background-color: #F8F8F8;
+    width: 80%;
+    margin: 1rem;
 `
