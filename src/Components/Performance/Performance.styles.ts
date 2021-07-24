@@ -1,9 +1,15 @@
 import styled from 'styled-components'
 
+import performanceImage from './performance.jpg'
+
 export const PerformanceArea = styled.div`
-    background-color: #F8F8F8;
-    min-height: 50vh;
-    padding: 2rem 10vw 4rem 10vw;
+    background: url(${performanceImage}) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 4rem 10vw 8rem 10vw;
+    color: #F8F8F8;
 `
 
 export const TextBox = styled.div`
@@ -12,22 +18,5 @@ export const TextBox = styled.div`
 `
 
 export const Text = styled.p`
-
-`
-
-export const FlexContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-    
-`
-
-export const Image = styled.img`
-    flex: 1;
-    height: 300px;
-    width: 300px;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 `

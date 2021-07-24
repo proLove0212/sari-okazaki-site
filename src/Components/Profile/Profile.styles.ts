@@ -28,7 +28,6 @@ export const ProfilePicture = styled.img`
 export const TextArea = styled.div`
     flex: 2;
     min-width: 15rem;
-
 `
 
 export const TextBox = styled.div`
@@ -36,8 +35,7 @@ export const TextBox = styled.div`
 `
 
 export const InfoTextBox = styled.div`
-    background-color: #373737;
-    color: #F8F8F8;
+    background-color: #E5E5E5;
     padding: 1rem;
     border-radius: 10px;
     margin-bottom: 2rem;
@@ -69,7 +67,7 @@ export const SubText = styled.p`
 export const HorizontalRule = styled.hr`
     border: 0;
     height: 1px;
-    background-color: #F8F8F8;
+    background-color: #2F2F2F;
     width: 80%;
     margin: 1rem;
 `

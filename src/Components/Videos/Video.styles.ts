@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const VideoArea = styled.div`
-    background-color: #373737;
+    background-color: #F8F8F8;
     padding: 2rem 0;
 `
 
@@ -16,5 +16,4 @@ export const FlexContainer = styled.div`
 export const Video = styled.iframe`
     flex: 1;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `

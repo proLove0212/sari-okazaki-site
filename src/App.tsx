@@ -37,8 +37,8 @@ const App = () => {
       <Header menuOpen={menuOpen} toggleMenu={toggleMenu} clicked={clicked}/>
       <Welcome />
       <Profile />
-      <Videos />
       <Performance />
+      <Videos />
       <LessonTitle />
       <LessonInfo />
       <BigPicture />
