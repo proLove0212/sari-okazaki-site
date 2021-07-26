@@ -29,6 +29,7 @@ export const Navbar = styled.div<{menuOpen: boolean; backgroundColor: string; cl
     top: 0;
     background-color: ${props => props.backgroundColor};
     z-index: 100;
+    padding-left: 3rem;
 
     @media (max-width: ${BREAKPOINT}) {
         transform: ${props => props.menuOpen ? "translateX(-110vw)": "none"};
@@ -84,7 +85,6 @@ export const Logo = styled.img`
     display: block;
     height: 40px;
     padding: 1rem;
-    margin-left: 2rem;
     @media (max-width: ${BREAKPOINT}) {
         display: none;
     }

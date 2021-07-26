@@ -9,8 +9,8 @@ import { Title, SubTitle } from '../../App.styles'
 const Profile = () => {
     return(
         <ProfileArea>
-            <Title color="#2F2F2F">プロフィール</Title>
-            <SubTitle color="#2F2F2F">Profile</SubTitle>
+            <Title color="#F8F8F8">プロフィール</Title>
+            <SubTitle color="#F8F8F8">Profile</SubTitle>
             <FlexContainer>
                 <ProfilePicture src={profile}></ProfilePicture>
                 <TextArea>

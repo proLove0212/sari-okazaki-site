@@ -20,7 +20,7 @@ export const BigPictureArea = styled.div`
 `
 
 export const CarouselArea = styled.div<{currentImage: string; animationOn: boolean;}>`
-    min-height: 100vh;
+    min-height: 90vh;
     background: url(${props => props.currentImage}) no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
