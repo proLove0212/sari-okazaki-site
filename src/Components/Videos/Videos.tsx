@@ -6,7 +6,7 @@ import { VideoArea, FlexContainer, Video } from './Video.styles'
 
 const Videos = () => {
     return(
-        <VideoArea>
+        <VideoArea id="videos">
             <Title color="#2F2F2F">関連動画</Title>
             <SubTitle color="#2F2F2F">Video</SubTitle>
             <FlexContainer>

@@ -8,7 +8,7 @@ import { Title, SubTitle } from '../../App.styles'
 
 const Profile = () => {
     return(
-        <ProfileArea>
+        <ProfileArea id="profile">
             <Title color="#F8F8F8">プロフィール</Title>
             <SubTitle color="#F8F8F8">Profile</SubTitle>
             <FlexContainer>

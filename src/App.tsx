@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 //Components
 import Header from './Components/Header/Header'
@@ -14,12 +14,12 @@ import Footer from './Components/Footer/Footer'
 
 //Styles
 
-
-
 const App = () => {
 
   const [ menuOpen, setMenuOpen ] = useState(true)
   const [ clicked, setClicked ] = useState(false)
+  const [ onHomeScreen, setOnHomeScreen ] = useState(true)
+  const [ scrolled, setScrolled ] = useState(false)
 
   const justClicked = () => {
     setClicked(true)
@@ -32,9 +32,22 @@ const App = () => {
     justClicked()
   }
 
+  useEffect(() => {
+  
+    window.onscroll = () => {
+      if (window.scrollY >= (window.innerHeight - 150)) {
+        setOnHomeScreen(false)
+        setScrolled(true)
+      }
+      if (window.scrollY < (window.innerHeight - 150)) {
+        setOnHomeScreen(true)
+      }
+    }
+  }, [onHomeScreen])
+
   return (
     <div>
-      <Header menuOpen={menuOpen} toggleMenu={toggleMenu} clicked={clicked}/>
+      <Header menuOpen={menuOpen} toggleMenu={toggleMenu} clicked={clicked} onHomeScreen={onHomeScreen} scrolled={scrolled}/>
       <Welcome />
       <Profile />
       <Performance />
@@ -44,7 +57,6 @@ const App = () => {
       <BigPicture />
       <Contact />
       <Footer />
-
     </div>
   )
 }

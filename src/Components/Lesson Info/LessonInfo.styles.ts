@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 export const LessonInfoArea = styled.div`
-    padding: 2rem 10vw;
+    padding: 2rem 10vw 4rem 10vw;
     background-color: #F8F8F8;
 `
 

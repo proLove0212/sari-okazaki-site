@@ -6,7 +6,7 @@ import { TitleBox, InfoBox, BigTitle, SubTitle, TitleFlexContainer, InfoFlexCont
 
 const LessonTitle = () => {
     return(
-        <LessonTitleArea>
+        <LessonTitleArea id="lesson-title">
             <TitleFlexContainer>
                 <TitleBox>
                     <BigTitle>三味線教室</BigTitle>

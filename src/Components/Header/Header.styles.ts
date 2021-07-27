@@ -21,14 +21,40 @@ const closeMenu = keyframes`
         transform: translateX(-110vw);
     }
 `
+const fadeIn = keyframes`
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+`
+
+const fadeOut = keyframes`
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+`
+
+export const HeaderArea = styled.header<{onHomeScreen: boolean; scrolled: boolean;}>`
+    animation: ${props => !props.scrolled ? "none" : props.onHomeScreen ? fadeOut : fadeIn } 0.3s forwards;
+    opacity: 0;
+    position: relative;
+    z-index: 9999;
+`
 
 export const Navbar = styled.div<{menuOpen: boolean; backgroundColor: string; clicked: boolean;}>`
     display: flex;
     width: 100%;
     position: fixed;
+    z-index: 9999;
     top: 0;
     background-color: ${props => props.backgroundColor};
-    z-index: 100;
     padding-left: 3rem;
 
     @media (max-width: ${BREAKPOINT}) {
@@ -43,7 +69,6 @@ export const Navbar = styled.div<{menuOpen: boolean; backgroundColor: string; cl
 
 export const MobileNavbar = styled.div<{backgroundColor: string}>`
     display: none;
-    z-index: 100;
 
     @media (max-width: ${BREAKPOINT}) {
         display: flex;
@@ -60,7 +85,8 @@ export const Anchor = styled.a`
 `
 export const Hamburger = styled.p<{color: string;}>`
     font-size: 1.3rem;
-    padding: 0.2rem 1rem 0 1rem;
+    padding: 0 1rem 0 1rem;
+    margin: auto 0;
     color: ${props => props.color};
 `
 
@@ -84,14 +110,14 @@ export const Cross = styled.p<{color: string;}>`
 export const Logo = styled.img`
     display: block;
     height: 40px;
-    padding: 1rem;
+    padding: 0.7rem 1rem 1rem 1rem;
     @media (max-width: ${BREAKPOINT}) {
         display: none;
     }
 `
 export const MobileLogo = styled.img`
     height: 40px;
-    padding: 1rem;
+    padding: 0.7rem 1rem 1rem 1rem;
 `
 
 export const Dummy = styled.div`

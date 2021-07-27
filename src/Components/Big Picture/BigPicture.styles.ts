@@ -14,9 +14,9 @@ const fadeIn = keyframes`
 `
 
 export const BigPictureArea = styled.div`
-    background-color: black;
+    background-color: #242424;
     position: relative;
-    
+    z-index: 0;
 `
 
 export const CarouselArea = styled.div<{currentImage: string; animationOn: boolean;}>`

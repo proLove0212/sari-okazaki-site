@@ -52,7 +52,7 @@ export const BiggerText = styled.p<{topMargin: boolean}>`
 `
 
 export const Text = styled.p`
-    color: #F8F8F8
+    color: #F8F8F8;
 `
 
 export const ListItem = styled.li`
