@@ -40,3 +40,7 @@ export const Button = styled.button<{ color?: string; backgroundColor?: string;}
     }
     
 `
+
+export const Anchor = styled.a`
+    all: unset;
+`

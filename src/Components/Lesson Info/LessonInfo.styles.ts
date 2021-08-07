@@ -49,6 +49,7 @@ export const Text = styled.p<{ fontWeight?: string; color?: string;}>`
 export const Map = styled.iframe`
     min-width: 100%;
     height: 15rem;
+    border: none;
     @media (max-width: 350px) {
         width: 15rem;
     }

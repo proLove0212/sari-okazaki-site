@@ -99,6 +99,8 @@ export const NavLink = styled.p<{textColor: string;}>`
 `
 
 export const Cross = styled.p<{color: string;}>`
+    font-size: 1.5rem;
+    color: #F8F8F8;
     display: none;
     padding: 0.5rem 1rem;
     color: ${props => props.color};

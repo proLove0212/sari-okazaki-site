@@ -1,10 +1,13 @@
 import React from 'react'
 
+//Styles
+import { FooterArea, Text } from './Footer.styles'
+
 const Footer = () => {
     return(
-        <div>
-            Footer
-        </div>
+        <FooterArea>
+            <Text>© 2021 Sari Okazaki</Text>
+        </FooterArea>
     )
 }
 

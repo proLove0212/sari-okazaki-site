@@ -12,4 +12,5 @@ body {
 
 :root {
   scroll-padding-top: 67px;
+  scroll-behavior: smooth;
 }

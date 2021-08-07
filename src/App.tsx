@@ -32,6 +32,11 @@ const App = () => {
     justClicked()
   }
 
+  const closeMenu = () => {
+    setMenuOpen(true)
+    justClicked()
+  }
+
   useEffect(() => {
   
     window.onscroll = () => {
@@ -47,8 +52,8 @@ const App = () => {
 
   return (
     <div>
-      <Header menuOpen={menuOpen} toggleMenu={toggleMenu} clicked={clicked} onHomeScreen={onHomeScreen} scrolled={scrolled}/>
-      <Welcome />
+      <Header menuOpen={menuOpen} toggleMenu={toggleMenu} clicked={clicked} onHomeScreen={onHomeScreen} scrolled={scrolled} closeMenu={closeMenu}/>
+      <Welcome menuOpen={menuOpen} toggleMenu={toggleMenu} clicked={clicked} closeMenu={closeMenu}/>
       <Profile />
       <Performance />
       <Videos />
