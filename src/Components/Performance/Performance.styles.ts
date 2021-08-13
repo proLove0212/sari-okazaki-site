@@ -19,7 +19,7 @@ export const PerformanceArea = styled.div`
 
 export const TextBox = styled.div`
     text-align: center;
-    padding: 2rem 10vw;
+    padding: 2rem 0;
 `
 
 export const Text = styled.p`

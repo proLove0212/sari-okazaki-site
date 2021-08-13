@@ -103,7 +103,7 @@ export const Navbar = styled.div<{menuOpen: boolean; backgroundColor: string; cl
 
     @media (max-width: ${BREAKPOINT}) {
         transform: ${props => props.menuOpen ? "translateX(-110vw)": "none"};
-        background-color: #851148;
+        background-color: #242424;
         position: fixed;
         display: block;
         padding: 1rem;

@@ -2,8 +2,10 @@ import styled from 'styled-components'
 
 import { zoomIn, zoomOut } from '../../App.styles'
 
+const BREAKPOINT = "400px"
+
 export const ContactArea = styled.div`
-    padding: 3rem 10vw;
+    padding: 3rem 10vw 1rem 10vw;
     background-color: #242424;
     color: #F8F8F8;
 `
@@ -12,6 +14,10 @@ export const BigText = styled.p<{ paddingLeft: string; }>`
     padding-left: ${props => props.paddingLeft};
     font-size: 2rem;
     font-weight: 600;
+
+    @media (max-width: ${BREAKPOINT}) {
+        padding-left: 0;
+    }
 `
 
 export const FlexContainer = styled.div`
@@ -23,6 +29,10 @@ export const FlexContainer = styled.div`
 export const Text = styled.p`
     padding-left: 2rem;
     font-size: 1.1rem;
+
+    @media (max-width: ${BREAKPOINT}) {
+        padding-left: 0;
+    }
 `
 
 export const FormArea = styled.div`
