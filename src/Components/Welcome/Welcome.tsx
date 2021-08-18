@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 import { MdClose} from 'react-icons/md'
 import { GiHamburgerMenu } from 'react-icons/gi'
@@ -6,8 +6,8 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import logo from '../Header/sari_logo.png'
 
 //Styles
-import { WelcomeArea } from './Welcome.styles'
-import { TextBox, BigTitle, SmallerTitle, TextContainer, HeaderArea, Navbar, MobileNavbar, Anchor, NavLink, Cross, Logo, MobileLogo, Hamburger, Dummy } from './Welcome.styles'
+import { FadeInSection } from '../../App.styles'
+import { WelcomeArea, TextBox, BigTitle, SmallerTitle, TextContainer, HeaderArea, Navbar, MobileNavbar, Anchor, NavLink, Cross, Logo, MobileLogo, Hamburger, Dummy } from './Welcome.styles'
 
 type Props = {
     toggleMenu: () => void;
@@ -15,10 +15,39 @@ type Props = {
     clicked: boolean;
     closeMenu: () => void;
 }
+
 const Welcome:React.FC<Props> = ( {toggleMenu, menuOpen, clicked, closeMenu} ) => {
+
+    const [onScreen, setOnScreen] = useState(false)
+    const fadeInElement = useRef() as React.MutableRefObject<HTMLInputElement>
+
+    useEffect(() => {
+
+        const { current } = fadeInElement
+
+        const options = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0
+        }
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => setOnScreen(entry.isIntersecting))
+        }, options)
+
+        if (!onScreen) {
+            observer.observe(current)
+        }
+
+        return () => {
+            observer.unobserve(current)
+        }
+        
+    }, [onScreen])
+
     return(
         <WelcomeArea>
-
+            
             <HeaderArea>    
                 <MobileNavbar backgroundColor="transparent">
                     <Hamburger color="#242424" onClick={toggleMenu}><GiHamburgerMenu /></Hamburger>
@@ -37,13 +66,14 @@ const Welcome:React.FC<Props> = ( {toggleMenu, menuOpen, clicked, closeMenu} ) =
                 </Navbar>
             </HeaderArea>
 
-
-            <TextContainer>
-                <TextBox>
-                    <BigTitle>岡崎さり</BigTitle>
-                    <SmallerTitle>三味線・箏</SmallerTitle>
-                </TextBox>
-            </TextContainer>
+            <FadeInSection ref={fadeInElement} onScreen={onScreen}>
+                <TextContainer>
+                    <TextBox>
+                        <BigTitle>岡崎さり</BigTitle>
+                        <SmallerTitle>三味線・箏</SmallerTitle>
+                    </TextBox>
+                </TextContainer>
+            </FadeInSection>
 
         </WelcomeArea>
     )

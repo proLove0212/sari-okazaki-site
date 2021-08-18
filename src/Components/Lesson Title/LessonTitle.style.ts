@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 import lessonTitleImage from './lesson_title.jpg'
-import lessonTitleMobileImage from './lesson_title_mobile2.jpg'
 
 const BREAKPOINT = "800px"
 
@@ -43,10 +42,9 @@ export const TitleBox = styled.div`
 
 export const InfoBox = styled.div`
     color: #F6F6F6;
-    margin-top: 6vh;
+    margin-top: 4vh;
     margin-left: 10vw;
     font-size: 1.2rem;
-    position: absolute;
     bottom: 10vh;
 
     @media (max-width: 900px) {

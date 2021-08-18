@@ -12,15 +12,15 @@ type Props = {
     menuOpen: boolean
     toggleMenu: () => void
     clicked: boolean
-    onHomeScreen: boolean
+    atHomeScreen: boolean
     scrolled: boolean
     closeMenu: () => void;
 }
 
-const Header:React.FC<Props> = ( {menuOpen, toggleMenu, clicked, onHomeScreen, scrolled, closeMenu } ) => {
+const Header:React.FC<Props> = ( {menuOpen, toggleMenu, clicked, atHomeScreen, scrolled, closeMenu } ) => {
 
     return(
-        <HeaderArea onHomeScreen={onHomeScreen} scrolled={scrolled}>
+        <HeaderArea atHomeScreen={atHomeScreen} scrolled={scrolled}>
             <MobileNavbar backgroundColor="#242424">
                 <Hamburger color="#F8F8F8" onClick={toggleMenu}><GiHamburgerMenu /></Hamburger>
                 <Anchor href="/"><MobileLogo src={logo}></MobileLogo></Anchor>

@@ -41,8 +41,8 @@ const fadeOut = keyframes`
     }
 `
 
-export const HeaderArea = styled.header<{onHomeScreen: boolean; scrolled: boolean;}>`
-    animation: ${props => !props.scrolled ? "none" : props.onHomeScreen ? fadeOut : fadeIn } 0.3s forwards;
+export const HeaderArea = styled.header<{atHomeScreen: boolean; scrolled: boolean;}>`
+    animation: ${props => !props.scrolled ? "none" : props.atHomeScreen ? fadeOut : fadeIn } 0.3s forwards;
     opacity: 0;
     position: relative;
     z-index: 9999;

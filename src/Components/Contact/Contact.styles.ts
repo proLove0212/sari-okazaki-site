@@ -86,6 +86,7 @@ export const Label = styled.label`
 `
 
 export const TextArea = styled.textarea`
+    font-family: 'Noto Sans JP', sans-serif;
     display: block;
     width: calc(100% - 2rem);
     height: 5rem;

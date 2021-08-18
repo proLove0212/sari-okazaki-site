@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components'
 import welcomeImage from './welcome.jpg'
 import welcomeImageMobile from './welcome_mobile3.jpg'
 
-const BREAKPOINT_WIDTH = "400px"
+const BREAKPOINT_WIDTH = "450px"
 const BREAKPOINT_HEIGHT = "700px"
 
 const BREAKPOINT = "700px"
@@ -39,11 +39,12 @@ export const BigTitle = styled.h1`
     padding: 0 0 1rem 0;
     border-bottom: 1px solid #2F2F2F;
     display: inline-block;
+    font-family: klee-one, sans-serif;
     @media (max-width: ${BREAKPOINT_WIDTH}) {
         padding: 0 0 0 0.7rem;
     }
     @media (max-height: ${BREAKPOINT_HEIGHT}) and (max-width: ${BREAKPOINT_WIDTH}) {
-        font-size: 2rem;
+        font-size: 2.5rem;
         margin-top: 3rem;
         margin-bottom: 0;
     }
@@ -53,6 +54,7 @@ export const SmallerTitle = styled.h3`
     margin: 0;
     font-weight: lighter;
     font-size: 1.5rem;
+    font-family: klee-one, sans-serif;
     @media (max-width: ${BREAKPOINT_WIDTH}) {
         text-align: center;
     }
@@ -60,7 +62,9 @@ export const SmallerTitle = styled.h3`
 
 export const TextContainer = styled.div`
     @media (max-width: ${BREAKPOINT_WIDTH}) {
-        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        width: 100vw;
     }
     
 `
@@ -166,6 +170,7 @@ export const Logo = styled.img`
     @media (max-width: ${BREAKPOINT}) {
         display: none;
     }
+    
 `
 export const MobileLogo = styled.img`
     height: 40px;

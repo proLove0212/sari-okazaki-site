@@ -37,3 +37,24 @@ export const zoomOut = keyframes`
         transform: scale(1);
     }
 `
+
+export const fadeIn = keyframes`
+    from {
+        opacity: 0;
+        transform: translateY(10vh);
+        visibility: hidden;
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+    }
+`
+
+export const FadeInSection = styled.div<{onScreen: boolean}>`
+    opacity: 0;
+    transform: translateY(10vh);
+    visibility: hidden;
+    animation: ${props => props.onScreen ? fadeIn : "none"} 1s ease-in-out forwards;
+`

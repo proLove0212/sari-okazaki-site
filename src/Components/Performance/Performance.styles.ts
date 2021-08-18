@@ -12,6 +12,9 @@ export const PerformanceArea = styled.div`
     background-size: cover;
     padding: 4rem 10vw 8rem 10vw;
     color: #F8F8F8;
+`
+
+export const FlexContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;

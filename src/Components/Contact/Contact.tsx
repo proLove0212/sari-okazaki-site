@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import emailjs from 'emailjs-com';
 
 //Styles
-import { Title, SubTitle } from '../../App.styles'
+import { Title, SubTitle, FadeInSection } from '../../App.styles'
 import { ContactArea, BigText, Text, FlexContainer, Form, FormArea, Input, Label, TextArea, InputArea, Button } from './Contact.styles'
 
 
@@ -19,43 +19,72 @@ const Contact = () => {
               alert("エラーが発生しました。 " + error.text)
               console.log(error.text)
           })
-      }
+    }
+
+    const [onScreen, setOnScreen] = useState(false)
+    const fadeInElement = useRef() as React.MutableRefObject<HTMLInputElement>
+
+    useEffect(() => {
+
+        const { current } = fadeInElement
+
+        const options = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0
+        }
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => setOnScreen(entry.isIntersecting))
+        }, options)
+
+        if (!onScreen) {
+            observer.observe(current)
+        }
+
+        return () => {
+            observer.unobserve(current)
+        }
+        
+    }, [onScreen])
 
     return(
         <ContactArea id="contact">
-            <Title color="#F8F8F8">お問い合わせ</Title>
-            <SubTitle color="#F8F8F8">Contact</SubTitle>
+            <FadeInSection ref={fadeInElement} onScreen={onScreen}>
+                <Title color="#F8F8F8">お問い合わせ</Title>
+                <SubTitle color="#F8F8F8">Contact</SubTitle>
+            
+                <BigText paddingLeft="2rem">連絡先</BigText>
+                <Text>電話 : 080 5349 6075</Text>
+                <Text>メール：sari.kiku.emiri@gmail.com</Text>
 
-            <BigText paddingLeft="2rem">連絡先</BigText>
-            <Text>電話 : 080 5349 6075</Text>
-            <Text>メール：sari.kiku.emiri@gmail.com</Text>
+                <FormArea>
+                    <BigText paddingLeft="0">連絡フォーム</BigText>
+                    <Form className="contact-form" onSubmit={sendEmail}>
 
-            <FormArea>
-                <BigText paddingLeft="0">連絡フォーム</BigText>
-                <Form className="contact-form" onSubmit={sendEmail}>
+                        <FlexContainer>
+                            <Input type="hidden" name="contact_number" />
 
-                    <FlexContainer>
-                        <Input type="hidden" name="contact_number" />
+                            <InputArea>
+                            <Label>お名前</Label>
+                            <Input type="text" name="user_name" required />
+                            </InputArea>
+
+                            <InputArea>
+                            <Label>メールアドレス</Label>
+                            <Input type="email" name="user_email" required/>
+                            </InputArea>
+                        </FlexContainer>
 
                         <InputArea>
-                        <Label>お名前</Label>
-                        <Input type="text" name="user_name" required />
+                            <Label>お問い合わせ内容</Label>
+                            <TextArea name="message" required />
                         </InputArea>
 
-                        <InputArea>
-                        <Label>メールアドレス</Label>
-                        <Input type="email" name="user_email" required/>
-                        </InputArea>
-                    </FlexContainer>
-
-                    <InputArea>
-                        <Label>お問い合わせ内容</Label>
-                        <TextArea name="message" required />
-                    </InputArea>
-
-                    <Button color="#F8F8F8" type="submit" value="送信" />
-                </Form>
-            </FormArea>
+                        <Button color="#F8F8F8" type="submit" value="送信" />
+                    </Form>
+                </FormArea>
+            </FadeInSection>
         </ContactArea>
         
     )

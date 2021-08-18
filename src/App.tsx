@@ -18,7 +18,7 @@ const App = () => {
 
   const [ menuOpen, setMenuOpen ] = useState(true)
   const [ clicked, setClicked ] = useState(false)
-  const [ onHomeScreen, setOnHomeScreen ] = useState(true)
+  const [ atHomeScreen, setAtHomeScreen ] = useState(true)
   const [ scrolled, setScrolled ] = useState(false)
 
   const justClicked = () => {
@@ -41,18 +41,18 @@ const App = () => {
   
     window.onscroll = () => {
       if (window.scrollY >= (window.innerHeight - 150)) {
-        setOnHomeScreen(false)
+        setAtHomeScreen(false)
         setScrolled(true)
       }
       if (window.scrollY < (window.innerHeight - 150)) {
-        setOnHomeScreen(true)
+        setAtHomeScreen(true)
       }
     }
-  }, [onHomeScreen])
+  }, [atHomeScreen])
 
   return (
     <div>
-      <Header menuOpen={menuOpen} toggleMenu={toggleMenu} clicked={clicked} onHomeScreen={onHomeScreen} scrolled={scrolled} closeMenu={closeMenu}/>
+      <Header menuOpen={menuOpen} toggleMenu={toggleMenu} clicked={clicked} atHomeScreen={atHomeScreen} scrolled={scrolled} closeMenu={closeMenu}/>
       <Welcome menuOpen={menuOpen} toggleMenu={toggleMenu} clicked={clicked} closeMenu={closeMenu}/>
       <Profile />
       <Performance />
