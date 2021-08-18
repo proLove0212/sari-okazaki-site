@@ -18,7 +18,7 @@ type Props = {
 
 const Welcome:React.FC<Props> = ( {toggleMenu, menuOpen, clicked, closeMenu} ) => {
 
-    const [onScreen, setOnScreen] = useState(false)
+    const [atScreen, setAtScreen] = useState(false)
     const fadeInElement = useRef() as React.MutableRefObject<HTMLInputElement>
 
     useEffect(() => {
@@ -32,10 +32,10 @@ const Welcome:React.FC<Props> = ( {toggleMenu, menuOpen, clicked, closeMenu} ) =
         }
 
         const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => setOnScreen(entry.isIntersecting))
+            entries.forEach(entry => setAtScreen(entry.isIntersecting))
         }, options)
 
-        if (!onScreen) {
+        if (!atScreen) {
             observer.observe(current)
         }
 
@@ -43,7 +43,7 @@ const Welcome:React.FC<Props> = ( {toggleMenu, menuOpen, clicked, closeMenu} ) =
             observer.unobserve(current)
         }
         
-    }, [onScreen])
+    }, [atScreen])
 
     return(
         <WelcomeArea>
@@ -66,7 +66,7 @@ const Welcome:React.FC<Props> = ( {toggleMenu, menuOpen, clicked, closeMenu} ) =
                 </Navbar>
             </HeaderArea>
 
-            <FadeInSection ref={fadeInElement} onScreen={onScreen}>
+            <FadeInSection ref={fadeInElement} atScreen={atScreen}>
                 <TextContainer>
                     <TextBox>
                         <BigTitle>岡崎さり</BigTitle>

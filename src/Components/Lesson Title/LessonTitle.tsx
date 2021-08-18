@@ -6,7 +6,7 @@ import { LessonTitleArea, TitleBox, InfoBox, BigTitle, SubTitle, TitleFlexContai
 
 const LessonTitle = () => {
 
-    const [onScreen, setOnScreen] = useState(false)
+    const [atScreen, setAtScreen] = useState(false)
     const fadeInElement = useRef() as React.MutableRefObject<HTMLInputElement>
 
     useEffect(() => {
@@ -20,10 +20,10 @@ const LessonTitle = () => {
         }
 
         const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => setOnScreen(entry.isIntersecting))
+            entries.forEach(entry => setAtScreen(entry.isIntersecting))
         }, options)
 
-        if (!onScreen) {
+        if (!atScreen) {
             observer.observe(current)
         }
 
@@ -31,11 +31,11 @@ const LessonTitle = () => {
             observer.unobserve(current)
         }
         
-    }, [onScreen])
+    }, [atScreen])
 
     return(
         <LessonTitleArea id="lesson-title">
-            <FadeInSection ref={fadeInElement} onScreen={onScreen}>
+            <FadeInSection ref={fadeInElement} atScreen={atScreen}>
                 <TitleFlexContainer>
                     <TitleBox>
                         <BigTitle>三味線教室</BigTitle>

@@ -21,7 +21,7 @@ const Contact = () => {
           })
     }
 
-    const [onScreen, setOnScreen] = useState(false)
+    const [atScreen, setAtScreen] = useState(false)
     const fadeInElement = useRef() as React.MutableRefObject<HTMLInputElement>
 
     useEffect(() => {
@@ -35,10 +35,10 @@ const Contact = () => {
         }
 
         const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => setOnScreen(entry.isIntersecting))
+            entries.forEach(entry => setAtScreen(entry.isIntersecting))
         }, options)
 
-        if (!onScreen) {
+        if (!atScreen) {
             observer.observe(current)
         }
 
@@ -46,11 +46,11 @@ const Contact = () => {
             observer.unobserve(current)
         }
         
-    }, [onScreen])
+    }, [atScreen])
 
     return(
         <ContactArea id="contact">
-            <FadeInSection ref={fadeInElement} onScreen={onScreen}>
+            <FadeInSection ref={fadeInElement} atScreen={atScreen}>
                 <Title color="#F8F8F8">お問い合わせ</Title>
                 <SubTitle color="#F8F8F8">Contact</SubTitle>
             

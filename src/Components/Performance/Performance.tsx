@@ -6,7 +6,7 @@ import { PerformanceArea, FlexContainer, TextBox, Text, Button, Anchor } from '.
 
 const Performance = () => {
 
-    const [onScreen, setOnScreen] = useState(false)
+    const [atScreen, setAtScreen] = useState(false)
     const fadeInElement = useRef() as React.MutableRefObject<HTMLInputElement>
 
     useEffect(() => {
@@ -20,10 +20,10 @@ const Performance = () => {
         }
 
         const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => setOnScreen(entry.isIntersecting))
+            entries.forEach(entry => setAtScreen(entry.isIntersecting))
         }, options)
 
-        if (!onScreen) {
+        if (!atScreen) {
             observer.observe(current)
         }
 
@@ -31,11 +31,11 @@ const Performance = () => {
             observer.unobserve(current)
         }
         
-    }, [onScreen])
+    }, [atScreen])
 
     return(
         <PerformanceArea id="performance">
-            <FadeInSection ref={fadeInElement} onScreen={onScreen}>
+            <FadeInSection ref={fadeInElement} atScreen={atScreen}>
                 <Title color="inherit">演奏依頼</Title>
                 <SubTitle color="inherit">Performance</SubTitle>
                 <FlexContainer>

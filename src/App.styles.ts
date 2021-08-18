@@ -52,9 +52,9 @@ export const fadeIn = keyframes`
     }
 `
 
-export const FadeInSection = styled.div<{onScreen: boolean}>`
+export const FadeInSection = styled.div<{atScreen: boolean}>`
     opacity: 0;
     transform: translateY(10vh);
     visibility: hidden;
-    animation: ${props => props.onScreen ? fadeIn : "none"} 1s ease-in-out forwards;
+    animation: ${props => props.atScreen ? fadeIn : "none"} 1s ease-in-out forwards;
 `

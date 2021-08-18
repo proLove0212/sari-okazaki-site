@@ -7,7 +7,7 @@ import { LessonInfoArea, BigTopText, SmallTopText, FlexContainer, LeftSide, Righ
 
 const LessonInfo = () => {
 
-    const [onScreen, setOnScreen] = useState(false)
+    const [atScreen, setAtScreen] = useState(false)
     const fadeInElement = useRef() as React.MutableRefObject<HTMLInputElement>
 
     useEffect(() => {
@@ -21,10 +21,10 @@ const LessonInfo = () => {
         }
 
         const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => setOnScreen(entry.isIntersecting))
+            entries.forEach(entry => setAtScreen(entry.isIntersecting))
         }, options)
 
-        if (!onScreen) {
+        if (!atScreen) {
             observer.observe(current)
         }
 
@@ -32,11 +32,11 @@ const LessonInfo = () => {
             observer.unobserve(current)
         }
         
-    }, [onScreen])
+    }, [atScreen])
 
     return(
         <LessonInfoArea>
-            <FadeInSection ref={fadeInElement} onScreen={onScreen}>
+            <FadeInSection ref={fadeInElement} atScreen={atScreen}>
                 <BigTopText>幸せ、笑顔あふれる楽しい教室</BigTopText>
                 <SmallTopText>三味線の粋な世界に触れてみませんか? 『笑三味線教室」では、初心者から専門的に習いたい方まで対応しております。 古典的な奏法の基礎をベースに幅広い邦楽曲の演奏ができるようにレッスンします。</SmallTopText>
 

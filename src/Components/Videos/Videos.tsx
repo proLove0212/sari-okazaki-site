@@ -6,7 +6,7 @@ import { VideoArea, FlexContainer, Video } from './Video.styles'
 
 const Videos = () => {
 
-    const [onScreen, setOnScreen] = useState(false)
+    const [atScreen, setAtScreen] = useState(false)
     const fadeInElement = useRef() as React.MutableRefObject<HTMLInputElement>
 
     useEffect(() => {
@@ -20,10 +20,10 @@ const Videos = () => {
         }
 
         const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => setOnScreen(entry.isIntersecting))
+            entries.forEach(entry => setAtScreen(entry.isIntersecting))
         }, options)
 
-        if (!onScreen) {
+        if (!atScreen) {
             observer.observe(current)
         }
 
@@ -31,11 +31,11 @@ const Videos = () => {
             observer.unobserve(current)
         }
         
-    }, [onScreen])
+    }, [atScreen])
 
     return(
         <VideoArea id="videos">
-            <FadeInSection ref={fadeInElement} onScreen={onScreen}>
+            <FadeInSection ref={fadeInElement} atScreen={atScreen}>
                 <Title color="#2F2F2F">関連動画</Title>
                 <SubTitle color="#2F2F2F">Video</SubTitle>
                 <FlexContainer>
