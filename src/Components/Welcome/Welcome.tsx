@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { MdClose} from 'react-icons/md'
 import { GiHamburgerMenu } from 'react-icons/gi'
@@ -18,32 +18,15 @@ type Props = {
 
 const Welcome:React.FC<Props> = ( {toggleMenu, menuOpen, clicked, closeMenu} ) => {
 
-    const [atScreen, setAtScreen] = useState(false)
-    const fadeInElement = useRef() as React.MutableRefObject<HTMLInputElement>
+    const [ atScreen, setAtScreen ] = useState(false)
 
     useEffect(() => {
 
-        const { current } = fadeInElement
+        setTimeout(() => {
+            setAtScreen(true)
+        }, 500)
 
-        const options = {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0
-        }
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => setAtScreen(entry.isIntersecting))
-        }, options)
-
-        if (!atScreen) {
-            observer.observe(current)
-        }
-
-        return () => {
-            observer.unobserve(current)
-        }
-        
-    }, [atScreen])
+    }, [])
 
     return(
         <WelcomeArea>
@@ -66,7 +49,7 @@ const Welcome:React.FC<Props> = ( {toggleMenu, menuOpen, clicked, closeMenu} ) =
                 </Navbar>
             </HeaderArea>
 
-            <FadeInSection ref={fadeInElement} atScreen={atScreen}>
+            <FadeInSection atScreen={atScreen}>
                 <TextContainer>
                     <TextBox>
                         <BigTitle>岡崎さり</BigTitle>
