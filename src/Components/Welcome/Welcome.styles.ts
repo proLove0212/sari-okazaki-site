@@ -39,6 +39,7 @@ export const BigTitle = styled.h1`
     padding: 0 0 1rem 0;
     border-bottom: 1px solid #2F2F2F;
     display: inline-block;
+    font-family: 'Klee One', cursive;
     @media (max-width: ${BREAKPOINT_WIDTH}) {
         padding: 0 0 0 0.7rem;
     }
@@ -53,6 +54,7 @@ export const SmallerTitle = styled.h3`
     margin: 0;
     font-weight: lighter;
     font-size: 1.5rem;
+    font-family: 'Klee One', cursive;
     @media (max-width: ${BREAKPOINT_WIDTH}) {
         text-align: center;
     }
