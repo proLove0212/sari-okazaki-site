@@ -19,7 +19,7 @@ export const WelcomeArea = styled.div`
 
     @media (max-width: ${BREAKPOINT_WIDTH}) {
         background: url(${welcomeImageMobile}) no-repeat center center;
-        background-size: 800px;
+        background-size: 500px;
     }
 
     @media (max-height: ${BREAKPOINT_HEIGHT}) and (max-width: ${BREAKPOINT_WIDTH}) {
