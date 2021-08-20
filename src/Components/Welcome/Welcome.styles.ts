@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 
 import welcomeImage from './welcome.jpg'
-import welcomeImageMobile from './welcome_mobile3.jpg'
+import welcomeImageMobile from './welcome_mobile3.jpeg'
 
 const BREAKPOINT_WIDTH = "450px"
 const BREAKPOINT_HEIGHT = "700px"
