@@ -11,9 +11,11 @@ export const BigTopText = styled.h2`
     font-size: 2.5rem;
 `
 
-export const SmallTopText = styled.p`
+export const SmallTopText = styled.p<{emphasis: boolean}>`
     text-align: center;
     font-size: 1.1rem;
+    color: ${props => props.emphasis ? "#D90D19" : "inherit"};
+    font-weight: ${props => props.emphasis ? "600" : "inherit"};
 `
 
 export const FlexContainer = styled.div`
