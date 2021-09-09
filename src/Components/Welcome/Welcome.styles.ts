@@ -1,10 +1,11 @@
 import styled, { keyframes } from 'styled-components'
 
 import welcomeImage from './welcome.jpg'
-import welcomeImageMobile from './welcome_mobile3.jpg'
+import welcomeImageMobile from './welcome_mobile.jpg'
 
 const BREAKPOINT_WIDTH = "450px"
-const BREAKPOINT_HEIGHT = "700px"
+const BREAKPOINT_HEIGHT = "800px"
+const BREAKPOINT_HEIGHT2 = "650px"
 
 const BREAKPOINT = "700px"
 
@@ -46,6 +47,11 @@ export const BigTitle = styled.h1`
     @media (max-height: ${BREAKPOINT_HEIGHT}) and (max-width: ${BREAKPOINT_WIDTH}) {
         font-size: 2.5rem;
         margin-top: 3rem;
+        margin-bottom: 0;
+    }
+    @media (max-height: ${BREAKPOINT_HEIGHT2}) and (max-width: ${BREAKPOINT_WIDTH}) {
+        font-size: 2rem;
+        margin-top: 1rem;
         margin-bottom: 0;
     }
 `

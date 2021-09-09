@@ -14,6 +14,7 @@ export const BigText = styled.p<{ paddingLeft: string; }>`
     padding-left: ${props => props.paddingLeft};
     font-size: 2rem;
     font-weight: 600;
+    margin: 1rem 0;
 
     @media (max-width: ${BREAKPOINT}) {
         padding-left: 0;
@@ -36,10 +37,8 @@ export const Text = styled.p`
 `
 
 export const FormArea = styled.div`
-    border: solid 1px;
     padding: 0 2rem 2rem 2rem;
     margin: 4rem 0;
-    border-radius: 15px;
 `
 
 export const Form = styled.form`
