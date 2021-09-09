@@ -11,7 +11,7 @@ export const ContactArea = styled.div`
 `
 
 export const BigText = styled.p<{ paddingLeft: string; }>`
-    padding-left: ${props => props.paddingLeft};
+    padding-left: 0;
     font-size: 2rem;
     font-weight: 600;
     margin: 1rem 0;
@@ -28,7 +28,6 @@ export const FlexContainer = styled.div`
 `
 
 export const Text = styled.p`
-    padding-left: 2rem;
     font-size: 1.1rem;
 
     @media (max-width: ${BREAKPOINT}) {
@@ -37,7 +36,6 @@ export const Text = styled.p`
 `
 
 export const FormArea = styled.div`
-    padding: 0 2rem 2rem 2rem;
     margin: 4rem 0;
 `
 
@@ -66,7 +64,7 @@ export const Button = styled.input<{ color: string; }>`
     all: initial;
     font-family: inherit;
     width: calc(100% - 1em);
-    max-width: 15rem;
+    max-width: 20rem;
     text-align: center;
     color: ${props => props.color};
     border: solid 1px;

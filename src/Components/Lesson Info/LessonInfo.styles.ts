@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const LessonInfoArea = styled.div`
     padding: 2rem 10vw 4rem 10vw;
-    background-color: #F0F0F0;
+    background-color: #F8F8F8;
 `
 
 export const BigTopText = styled.h2`

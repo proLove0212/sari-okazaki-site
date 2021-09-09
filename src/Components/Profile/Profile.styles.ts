@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ProfileArea = styled.div`
     padding: 2rem 10vw;
-    background-color: #242424;
+    background-color: #F8F8F8;
     
     @media(max-width: 500px) {
         padding: 2rem 3vw;
@@ -35,7 +35,7 @@ export const TextBox = styled.div`
 `
 
 export const InfoTextBox = styled.div`
-    color: #F8F8F8;
+    color: #242424;
     margin-bottom: 2rem;
     padding: 1rem 1rem 1rem 0;
 
@@ -47,27 +47,29 @@ export const BiggerText = styled.p<{topMargin: boolean}>`
     font-weight: 500;
     margin-top: ${props => props.topMargin ? "auto" : "0"};
     margin-bottom: 0;
-    margin-left: 1rem;
 `
 
 export const Text = styled.p`
-    color: #F8F8F8;
+    color: #242424;
+`
+
+export const Ul = styled.ul`
+    padding-left: 1rem;
 `
 
 export const ListItem = styled.li`
-
+    
 `
 
 export const SubText = styled.p`
     margin-top: 0;
     font-size: 0.8rem;
-    margin-left: 1rem;
 `
 
 export const HorizontalRule = styled.hr`
     border: 0;
     height: 1px;
-    background-color: #F8F8F8;
+    background-color: #242424;
     width: 80%;
     margin: 1rem;
 `

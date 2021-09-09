@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import profile from './profile.jpg'
 
 //Styles
-import { ProfileArea, FlexContainer, ProfilePicture, TextArea, TextBox, Text, BiggerText, InfoTextBox, ListItem, SubText, HorizontalRule } from './Profile.styles'
+import { ProfileArea, FlexContainer, ProfilePicture, TextArea, TextBox, Text, BiggerText, InfoTextBox, ListItem, SubText, HorizontalRule, Ul } from './Profile.styles'
 import { Title, SubTitle, FadeInSection } from '../../App.styles'
 
 const Profile = () => {
@@ -38,7 +38,7 @@ const Profile = () => {
     return(
         <ProfileArea id="profile">
             <FadeInSection ref={fadeInElement} atScreen={atScreen}>
-                <Title color="#F8F8F8">プロフィール</Title>
+                <Title color="#242424">プロフィール</Title>
                 <SubTitle color="#F8F8F8">Profile</SubTitle>
             
                 <FlexContainer>
@@ -50,11 +50,11 @@ const Profile = () => {
                             <BiggerText topMargin={true}>清元延菊笑璃</BiggerText>
                             <SubText>(きよもとのぶきくえみり)</SubText>
                             <HorizontalRule></HorizontalRule>
-                            <ul>
+                            <Ul>
                                 <ListItem>1990年　12月26日大阪生まれ</ListItem>
                                 <ListItem>2019年度　大阪音楽大学音楽学部音楽学科声楽専攻　卒業</ListItem>
                                 <ListItem>笑(Emi)三味線教室主宰</ListItem>
-                            </ul>
+                            </Ul>
                         </InfoTextBox>
                         <TextBox>
                             <Text>14歳より清元 延菊笑師、清元菊輔師の両氏に師事し、20歳で清元の師範免許を取得する。清元 延菊笑璃として、舞踊会の地方、祇園踊り、北野踊りの三味線方として活動する。NHKラジオ放送「邦楽のひととき」等にも出演し、活動の幅を広げる。</Text>
