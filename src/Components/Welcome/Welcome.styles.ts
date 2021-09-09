@@ -5,7 +5,7 @@ import welcomeImageMobile from './welcome_mobile.jpg'
 
 const BREAKPOINT_WIDTH = "450px"
 const BREAKPOINT_HEIGHT = "800px"
-const BREAKPOINT_HEIGHT2 = "680px"
+const BREAKPOINT_HEIGHT2 = "700px"
 
 const BREAKPOINT = "700px"
 
@@ -24,7 +24,7 @@ export const WelcomeArea = styled.div`
     }
 
     @media (max-height: ${BREAKPOINT_HEIGHT}) and (max-width: ${BREAKPOINT_WIDTH}) {
-        background-size: 500px;
+        background-size: 530px;
     }
 `
 export const TextBox = styled.div`

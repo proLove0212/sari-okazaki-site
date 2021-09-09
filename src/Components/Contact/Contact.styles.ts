@@ -29,10 +29,6 @@ export const FlexContainer = styled.div`
 
 export const Text = styled.p`
     padding-top: 1rem;
-
-    @media (max-width: ${BREAKPOINT}) {
-        padding-left: 0;
-    }
 `
 
 export const FormArea = styled.div`
@@ -75,6 +71,9 @@ export const Button = styled.input<{ color: string; }>`
     &:hover {
         animation: ${zoomIn} 0.3s forwards;
         cursor: pointer;
+    }
+    @media (max-width: 520px) {
+        max-width: none;
     }
 `
 
