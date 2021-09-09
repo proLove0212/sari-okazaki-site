@@ -64,7 +64,7 @@ export const Button = styled.input<{ color: string; }>`
     all: initial;
     font-family: inherit;
     width: calc(100% - 1em);
-    max-width: 20rem;
+    max-width: 15rem;
     text-align: center;
     color: ${props => props.color};
     border: solid 1px;
