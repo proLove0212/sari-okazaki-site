@@ -55,8 +55,8 @@ const Contact = () => {
                 <SubTitle color="#F8F8F8">Contact</SubTitle>
             
                 <BigText paddingLeft="2rem">連絡先</BigText>
-                <Text>電話 : 080 5349 6075</Text>
-                <Text>メール：sari.kiku.emiri@gmail.com</Text>
+                <Text><b>電話 :</b> 080 5349 6075</Text>
+                <p><b>メール：</b> sari.kiku.emiri@gmail.com</p>
 
                 <FormArea>
                     <BigText paddingLeft="0">連絡フォーム</BigText>

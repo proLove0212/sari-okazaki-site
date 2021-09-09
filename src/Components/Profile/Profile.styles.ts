@@ -54,11 +54,13 @@ export const Text = styled.p`
 `
 
 export const Ul = styled.ul`
-    padding-left: 1rem;
+    padding-left: 0;
 `
 
 export const ListItem = styled.li`
-    
+    list-style-type: none;
+    margin-bottom: 0.5rem;
+    font-weight: bolder;
 `
 
 export const SubText = styled.p`

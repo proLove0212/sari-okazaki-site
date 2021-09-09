@@ -39,7 +39,7 @@ const Profile = () => {
         <ProfileArea id="profile">
             <FadeInSection ref={fadeInElement} atScreen={atScreen}>
                 <Title color="#242424">プロフィール</Title>
-                <SubTitle color="#F8F8F8">Profile</SubTitle>
+                <SubTitle color="#242424">Profile</SubTitle>
             
                 <FlexContainer>
                     <ProfilePicture src={profile}></ProfilePicture>

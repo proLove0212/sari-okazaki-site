@@ -28,7 +28,7 @@ export const FlexContainer = styled.div`
 `
 
 export const Text = styled.p`
-    font-size: 1.1rem;
+    padding-top: 1rem;
 
     @media (max-width: ${BREAKPOINT}) {
         padding-left: 0;
