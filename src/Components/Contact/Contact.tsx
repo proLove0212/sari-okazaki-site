@@ -51,8 +51,8 @@ const Contact = () => {
     return(
         <ContactArea id="contact">
             <FadeInSection ref={fadeInElement} atScreen={atScreen}>
-                <Title color="#F8F8F8">お問い合わせ</Title>
-                <SubTitle color="#F8F8F8">Contact</SubTitle>
+                <Title color="#242424">お問い合わせ</Title>
+                <SubTitle color="#242424">Contact</SubTitle>
             
                 <BigText paddingLeft="2rem">連絡先</BigText>
                 <Text><b>電話 :</b> 080 5349 6075</Text>

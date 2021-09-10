@@ -36,8 +36,8 @@ const Videos = () => {
     return(
         <VideoArea id="videos">
             <FadeInSection ref={fadeInElement} atScreen={atScreen}>
-                <Title color="#F8F8F8">関連動画</Title>
-                <SubTitle color="#F8F8F8">Video</SubTitle>
+                <Title color="#242424">関連動画</Title>
+                <SubTitle color="#242424">Video</SubTitle>
                 <FlexContainer>
                     {/*<Video width="560" height="315" src="https://www.youtube.com/embed/9yszjIoIAyU" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></Video>*/}
                     <Video loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/iWhA8UcEQ7Q" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></Video>

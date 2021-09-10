@@ -6,8 +6,8 @@ const BREAKPOINT = "400px"
 
 export const ContactArea = styled.div`
     padding: 3rem 10vw 1rem 10vw;
-    background-color: #242424;
-    color: #F8F8F8;
+    background-color: #F8F8F8;
+    color: #242424;
 `
 
 export const BigText = styled.p<{ paddingLeft: string; }>`
@@ -43,8 +43,8 @@ export const Input = styled.input`
     display: block;
     height: 2rem;
     width: calc(100% - 2rem);
-    background-color: #F8F8F8;
-    border: none;
+    background-color: #FFFFFF;
+    border: solid 1px #242424;
     margin-top: 0.5rem;
     border-radius: 15px;
     padding: 0 1rem;
@@ -87,6 +87,7 @@ export const TextArea = styled.textarea`
     width: calc(100% - 2rem);
     height: 5rem;
     margin-top: 0.5rem;
+    border: solid 1px #242424;
     border-radius: 15px;
     padding: 1rem;
 `

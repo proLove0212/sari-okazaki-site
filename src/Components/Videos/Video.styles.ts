@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const VideoArea = styled.div`
-    background-color: #242424;
+    background-color: #F8F8F8;
     padding: 2rem 0;
 `
 
