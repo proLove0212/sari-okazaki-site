@@ -81,7 +81,7 @@ const Contact = () => {
                             <TextArea name="message" required />
                         </InputArea>
 
-                        <Button color="#F8F8F8" type="submit" value="送信" />
+                        <Button color="#242424" type="submit" value="送信" />
                     </Form>
                 </FormArea>
             </FadeInSection>
