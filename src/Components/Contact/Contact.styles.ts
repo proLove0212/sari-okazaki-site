@@ -68,6 +68,7 @@ export const Button = styled.input<{ color: string; }>`
     padding: 0.5em;
     border-radius: 15px;
     animation: ${zoomOut} 0.3s forwards;
+    background-color: #FFFFFF;
     &:hover {
         animation: ${zoomIn} 0.3s forwards;
         cursor: pointer;
