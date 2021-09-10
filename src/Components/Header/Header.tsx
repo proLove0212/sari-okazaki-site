@@ -21,13 +21,13 @@ const Header:React.FC<Props> = ( {menuOpen, toggleMenu, clicked, atHomeScreen, s
 
     return(
         <HeaderArea atHomeScreen={atHomeScreen} scrolled={scrolled}>
-            <MobileNavbar backgroundColor="#851148">
+            <MobileNavbar backgroundColor="#242424">
                 <Hamburger color="#F8F8F8" onClick={toggleMenu}><GiHamburgerMenu /></Hamburger>
                 <Anchor href="/"><MobileLogo src={logo}></MobileLogo></Anchor>
                 <Dummy></Dummy>
             </MobileNavbar>
 
-            <Navbar backgroundColor="#851148" menuOpen={menuOpen} clicked={clicked}>
+            <Navbar backgroundColor="#242424" menuOpen={menuOpen} clicked={clicked}>
                 <Cross color="#F8F8F8" onClick={toggleMenu}><MdClose/></Cross>
                 <Anchor href="/" onClick={closeMenu}><Logo src={logo}></Logo></Anchor>
                 <Anchor href="#profile" onClick={closeMenu}><NavLink textColor="#F8F8F8">プロフィール</NavLink></Anchor>

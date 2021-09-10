@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const FooterArea = styled.div`
-    background-color: #851148;
+    background-color: #242424;
 `
 
 export const Text = styled.p`
