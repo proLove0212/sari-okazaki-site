@@ -42,10 +42,21 @@ const BigPicture = () => {
         }
     }
 
+    const prevImage = () => {
+        triggerAnimation()
+
+        if (currentImage === 0) {
+            setCurrentImage(imageNames.length - 1)
+        }
+        else {
+            setCurrentImage(currentImage - 1)
+        }
+    }
+
     return(
         <BigPictureArea>
             <CarouselArea animationOn={animationOn} currentImage={imageNames[currentImage]}></CarouselArea>
-            <LeftArrow><IoIosArrowBack></IoIosArrowBack></LeftArrow>
+            <LeftArrow onClick={prevImage}><IoIosArrowBack></IoIosArrowBack></LeftArrow>
             <RightArrow onClick={nextImage}><IoIosArrowForward></IoIosArrowForward></RightArrow>
         </BigPictureArea>
     )
