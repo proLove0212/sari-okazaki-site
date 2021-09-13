@@ -51,7 +51,7 @@ const Profile = () => {
                             <SubText>(きよもとのぶきくえみり)</SubText>
                             <HorizontalRule></HorizontalRule>
                             <Ul>
-                                <ListItem>1990年　12月26日大阪生まれ</ListItem>
+                                <ListItem>出身地：大阪</ListItem>
                                 <ListItem>2019年度　大阪音楽大学音楽学部音楽学科声楽専攻　卒業</ListItem>
                                 <ListItem>笑(Emi)三味線教室主宰</ListItem>
                             </Ul>

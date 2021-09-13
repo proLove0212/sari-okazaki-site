@@ -38,7 +38,7 @@ const LessonInfo = () => {
         <LessonInfoArea>
             <FadeInSection ref={fadeInElement} atScreen={atScreen}>
                 <BigTopText>幸せ、笑顔あふれる楽しい教室</BigTopText>
-                <SmallTopText emphasis={false} >三味線の粋な世界に触れてみませんか? 『笑三味線教室」では、初心者から専門的に習いたい方まで対応しております。 古典的な奏法の基礎をベースに幅広い邦楽曲の演奏ができるようにレッスンします。</SmallTopText>
+                <SmallTopText emphasis={false} >三味線の粋な世界に触れてみませんか? 『笑三味線教』では、初心者から専門的に習いたい方まで対応しております。 古典的な奏法の基礎をベースに幅広い邦楽曲の演奏ができるようにレッスンします。</SmallTopText>
                 <SmallTopText emphasis={true}>現在は新型コロナウイルス感染症等感染防止対策実施し、お稽古を行っております。</SmallTopText>
 
                 <FlexContainer>
