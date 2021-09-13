@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import Header from './Components/Header/Header'
 import Welcome from './Components/Welcome/Welcome'
 import Profile from './Components/Profile/Profile'
-import Videos from './Components/Videos/Videos'
 import Performance from './Components/Performance/Performance'
 import LessonTitle from './Components/Lesson Title/LessonTitle'
 import LessonInfo from './Components/Lesson Info/LessonInfo'
