@@ -50,8 +50,8 @@ const LessonInfo = () => {
                         </TextBox>
                         <TextBox>
                             <Title>お月謝</Title>
-                            <Text>小学生（30分）月1回 ３,000円　/　月2回 5,000円</Text>
-                            <Text>中学生（45分）月1回 ３,000円　/　月2回 6,000円</Text>
+                            <Text>小学生（30分）月1回 3,000円　/　月2回 5,000円</Text>
+                            <Text>中学生（45分）月1回 3,000円　/　月2回 6,000円</Text>
                             <Text>大人（60分）月1回 4,000円　/　月2回 7,000円</Text>
                         </TextBox>
                         <TextBox>
@@ -66,14 +66,14 @@ const LessonInfo = () => {
                         </TextBox>
                         <TextBox>
                             <Title>振替えポリシー</Title>
-                            <Text>演奏会出演等によりレッスン日振替え日をお願いすることがあります。</Text>
-                            <Text>また、台風や震災等で教室実施が難しいときは、振替えレッスン。</Text>
+                            <Text>講師の演奏会出演等によりレッスン日の振替えを、お願いすることがあります。</Text>
+                            <Text>また、台風や震災等で教室実施が難しいときは、振替え日を設定します。</Text>
                         </TextBox>
                     </LeftSide>
                     <RightSide>
                         <TextBox>
                             <Title>レッスン内容</Title>
-                            <Text>古典的な奏法を中心に幅広く邦楽曲に親しんでもらう。</Text>
+                            <Text>日本の伝統楽器である三味線や箏の音色に触れ、古典的な奏法を中心に幅広く邦楽曲に親しんでもらう。</Text>
                             <Text>古き良き三味線の音色に触れてもらう。</Text>
                         </TextBox>
                         <TextBox>
