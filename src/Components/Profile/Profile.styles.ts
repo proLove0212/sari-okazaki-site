@@ -37,7 +37,7 @@ export const TextBox = styled.div`
 export const InfoTextBox = styled.div`
     color: #242424;
     margin-bottom: 2rem;
-    padding: 1rem 1rem 1rem 0;
+    padding: 1rem 1rem 0rem 0;
 
 `
 
