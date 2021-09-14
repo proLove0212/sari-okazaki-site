@@ -32,7 +32,6 @@ const Header:React.FC<Props> = ( {menuOpen, toggleMenu, clicked, atHomeScreen, s
                 <Anchor href="/" onClick={closeMenu}><Logo src={logo}></Logo></Anchor>
                 <Anchor href="#profile" onClick={closeMenu}><NavLink textColor="#F8F8F8">プロフィール</NavLink></Anchor>
                 <Anchor href="#performance" onClick={closeMenu}><NavLink textColor="#F8F8F8">演奏依頼</NavLink></Anchor>
-                <Anchor href="#videos" onClick={closeMenu}><NavLink textColor="#F8F8F8">関連動画</NavLink></Anchor>
                 <Anchor href="#lesson-title" onClick={closeMenu}><NavLink textColor="#F8F8F8">教室</NavLink></Anchor>
                 <Anchor href="#contact" onClick={closeMenu}><NavLink textColor="#F8F8F8">お問い合わせ</NavLink></Anchor>
             </Navbar>
