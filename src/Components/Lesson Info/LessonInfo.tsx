@@ -45,14 +45,14 @@ const LessonInfo = () => {
                     <LeftSide>
                         <TextBox>
                             <Title>お稽古日 / 時間</Title>
-                            <Text>水曜日16時〜　木曜日16時〜　土・日曜日13時〜</Text>
+                            <Text>火曜日10時〜 水曜日16時〜　木曜日16時〜　土・日曜日10時〜</Text>
                             <Text>その他の日時は応相談</Text>
                         </TextBox>
                         <TextBox>
                             <Title>お月謝</Title>
                             <Text>小学生（30分）月1回 3,000円　/　月2回 5,000円</Text>
-                            <Text>中学生（45分）月1回 3,000円　/　月2回 6,000円</Text>
-                            <Text>大人（60分）月1回 4,000円　/　月2回 7,000円</Text>
+                            <Text>中高生（45分）月1回 3,000円　/　月2回 6,000円</Text>
+                            <Text>大人（60分）月1回 4,000円　/　月2回 8,000円</Text>
                         </TextBox>
                         <TextBox>
                             <Title>お支払い方法</Title>
@@ -66,7 +66,7 @@ const LessonInfo = () => {
                         </TextBox>
                         <TextBox>
                             <Title>振替えポリシー</Title>
-                            <Text>講師の演奏会出演等によりレッスン日の振替えを、お願いすることがあります。</Text>
+                            <Text>講師の演奏会出演等により、レッスン日の振替えをお願いすることがあります。また、生徒様のご都合による振替も前日までにご連絡を頂くことで、対応したいと考えております。台風や震災時で教室実施が難しいときは、振替え日を設定します。</Text>
                             <Text>また、台風や震災等で教室実施が難しいときは、振替え日を設定します。</Text>
                         </TextBox>
                     </LeftSide>
@@ -78,9 +78,7 @@ const LessonInfo = () => {
                         </TextBox>
                         <TextBox>
                             <Title>場所&MAP</Title>
-                            <Map src="https://www.google.com/maps/d/u/0/embed?mid=1UrvrWBfcN6xyBhRH3GCF-PgWJxyV7z2Y"></Map>
-                            <Title>新町教室</Title>
-                            <Text>大阪市西区新町3-8-12-801</Text>
+                            <Map src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.2822651874576!2d135.5052735152315!3d34.67282488044165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e73e14bcefb7%3A0xca6e637cd50f5d4b!2z44CSNTQyLTAwODIgT3Nha2EsIENodW8gV2FyZCwgU2hpbWFub3VjaGksIDEtY2jFjW1l4oiSMTTiiJIxNSDlpKnph47jg5Pjg6s!5e0!3m2!1sen!2sjp!4v1639808685010!5m2!1sen!2sjp"></Map>
                             <Title>島之内教室</Title>
                             <Text>大阪市中央区島の内1-14-15 天野ビル</Text>
                         </TextBox>

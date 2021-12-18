@@ -10,8 +10,11 @@ import image2 from "./carousel_images/image2.jpg"
 /*import image3 from './carousel_images/image3.jpg' */
 import image4 from './carousel_images/image4.jpg'
 import image5 from './carousel_images/image5.jpg'
+import image6 from './carousel_images/image6.jpg'
+import image7 from './carousel_images/image7.jpg'
+import image8 from './carousel_images/image8.jpg'
 
-const imageNames = [ image1, image2, image4, image5 ] 
+const imageNames = [ image1, image2, image4, image5, image6, image7, image8 ] 
 
 const BigPicture = () => {
 
